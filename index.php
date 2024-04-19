@@ -1,4 +1,6 @@
-<h2>Ví dụ 1:</h2>
+<html>
+	<body>
+	<h2>Ví dụ 1:</h2>
 		<p>Văn bản HTML.</p>
 		<?php 
 		
@@ -37,4 +39,19 @@
 			$r=10;
 			$s= PI * pow($r ,2);
 			$p = 2 * PI * $r;
-		?>
+		?> <br>
+
+<?php
+for ($i = 1; $i <= 200; $i++) {
+    if ($i % 2 == 0) {
+        echo '<span style="font-weight: bold; color: red;">' . $i . '</span> ';
+    } else {
+
+        echo '<span style="font-style: italic; color: blue;">' . $i . '</span> ';
+    }
+}
+?>
+	
+
+	</body>
+</html>
