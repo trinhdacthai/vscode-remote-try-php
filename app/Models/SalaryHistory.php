@@ -1,0 +1,20 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class SalaryHistory extends Model
+{
+    use HasFactory;
+    protected $table='salary_history';
+    public $timestamps =false;
+
+    public function user(){
+        return $this->belongsTo(User::class,'user_id');
+    }
+    public function staff(){
+        return $this->belongsTo(User::class,'created_by');
+    }
+}
